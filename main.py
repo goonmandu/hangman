@@ -3,7 +3,7 @@ import random
 
 def main():
     with open("randomwords.txt") as f:
-        word = random.choice(f).rstrip()
+        word = random.choice(f.readlines()).rstrip()
     marked = [None] * len(word)
     tries = 0
     used_letters = []
@@ -65,4 +65,3 @@ def main():
 
 if __name__ == "__main__":
     main()
-    
