@@ -1,7 +1,7 @@
 import random
 
 with open("randomwords.txt") as f:
-    word = random.choice(f).rstrip()
+    word = random.choice(f.readlines()).rstrip()
 
 word_set=set(word)
 TRIES=len(word)
