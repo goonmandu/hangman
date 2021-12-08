@@ -3,9 +3,7 @@ import random
 
 def main():
     with open("randomwords.txt") as f:
-        word_list = f.readlines()
-    word_list = [line.strip("\n") for line in word_list]
-    word = random.choice(word_list)
+        word = random.choice(f).rstrip()
     marked = [None] * len(word)
     tries = 0
     used_letters = []
