@@ -4,7 +4,7 @@ with open("randomwords.txt") as f:
     word = random.choice(f).rstrip()
 
 word_set=set(word)
-TRIES=6
+TRIES=len(word)
 while word_set and TRIES:
     print(*('_' if letter in word_set else letter for letter in word),
           f'{TRIES=}')
